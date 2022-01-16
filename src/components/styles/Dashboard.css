@@ -1,0 +1,38 @@
+.searchFormRow{
+    border: 2px solid black;
+}
+
+.dashboardBooksRow{
+    padding: 20px 20px;
+}
+.bookTitle{
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+}
+.viewBtn{
+    display: flex !important;
+    align-items: center !important;
+    text-transform: capitalize;
+}
+.bookPrice{
+    color: #F40057;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+.cardContent{
+    background-color: #DCDCDC;
+}
+.cartBtn{
+    background-color: black;
+    margin-top: 15px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+.cartBtn:hover{
+    background-color: #2A344A;
+}
+.revealTitle{
+    font-family: 'Roboto',sans-serif !important;
+    font-weight: 600 !important;
+}
