@@ -10,29 +10,30 @@ function Navbar() {
     var sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav, {});
   }, []);
+
   return (
-    <div className="navbar-fixed">
-      <nav className=" dashNav">
-        <div className="nav-wrapper">
-          <a href="" className="brand-logo brandLogo">
-            <FaBook className="white-text brandImage" />
+    <div className=''>
+      <nav className=' dashNav'>
+        <div className='nav-wrapper'>
+          <a href='' className='brand-logo brandLogo'>
+            <FaBook className='white-text brandImage' />
             Bookto
           </a>
-          <a data-target="mobile-demo" className="sidenav-trigger">
-            <GiHamburgerMenu className="white-text" />
+          <a data-target='mobile-demo' className='sidenav-trigger'>
+            <GiHamburgerMenu className='white-text' />
           </a>
-          <ul className="right hide-on-med-and-down">
-            <li className="navLi">
-              <a href="">Home</a>
+          <ul className='right hide-on-med-and-down'>
+            <li className='navLi'>
+              <a href=''>Home</a>
             </li>
-            <li className="navLi">
-              <a href="">Create Book</a>
+            <li className='navLi'>
+              <a href=''>Create Book</a>
             </li>
-            <li className="navLi">
-              <a href="">My Books</a>
+            <li className='navLi'>
+              <a href=''>My Books</a>
             </li>
             <li>
-              <div class="chip">
+              <div class='chip'>
                 <img src={msd} />
                 Dhoni
               </div>
@@ -41,21 +42,21 @@ function Navbar() {
         </div>
       </nav>
 
-      <ul className="sidenav" id="mobile-demo" ref={navRef}>
+      <ul className='sidenav' id='mobile-demo' ref={navRef}>
         <li>
-          <div class="chip sideNavProfile">
+          <div class='chip sideNavProfile'>
             <img src={msd} />
             Dhoni
           </div>
         </li>
-        <li className="navLi">
-          <a href="">Home</a>
+        <li className='navLi'>
+          <a href=''>Home</a>
         </li>
-        <li className="navLi">
-          <a href="">Create Book</a>
+        <li className='navLi'>
+          <a href=''>Create Book</a>
         </li>
-        <li className="navLi">
-          <a href="">My Books</a>
+        <li className='navLi'>
+          <a href=''>My Books</a>
         </li>
       </ul>
     </div>

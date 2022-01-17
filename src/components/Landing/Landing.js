@@ -1,12 +1,21 @@
-import React from 'react'
-import SignUp from '../Auth/SignUp'
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 function Landing() {
-    return (
-        <div>
-          <SignUp/>
-        </div>
-    )
+  const navigate = useNavigate();
+  return (
+    <div>
+      <button
+        className='btn'
+        onClick={() => {
+          navigate("/dashboard");
+        }}
+      >
+        SignUp/Login
+      </button>
+      <Navbar />
+    </div>
+  );
 }
 
-export default Landing
+export default Landing;
