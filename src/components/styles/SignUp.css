@@ -1,0 +1,13 @@
+.signInPage {
+  height: 100vh !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.amplify-field-group {
+  display: flex !important;
+  align-items: center !important;
+}
+.amplify-field__show-password {
+  border: none !important;
+}
