@@ -1,0 +1,56 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bookto-dev-175249-authRole",
+      "UnauthRoleArn": "arn:aws:iam::515283276962:role/amplify-bookto-dev-175249-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::515283276962:role/amplify-bookto-dev-175249-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-bookto-dev-175249-deployment",
+      "UnauthRoleName": "amplify-bookto-dev-175249-unauthRole",
+      "StackName": "amplify-bookto-dev-175249",
+      "StackId": "arn:aws:cloudformation:ap-south-1:515283276962:stack/amplify-bookto-dev-175249/08da3390-76c7-11ec-b7f6-02bb357ac4d4",
+      "AmplifyAppId": "d19q3w990qdcm5"
+    }
+  },
+  "auth": {
+    "bookto44c43956": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/auth/bookto44c43956-cloudformation-template.json",
+        "logicalId": "authbookto44c43956"
+      },
+      "lastPushTimeStamp": "2022-01-16T12:41:03.677Z",
+      "output": {
+        "UserPoolId": "ap-south-1_VrWNdgG4R",
+        "AppClientIDWeb": "2or5qov41d9ac72t4kvc9kob7d",
+        "AppClientID": "5rng6a9bdb6u2nid1euhqmkek6",
+        "IdentityPoolId": "ap-south-1:31108f87-a613-4b5d-b264-9e45c7d09408",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-south-1:515283276962:userpool/ap-south-1_VrWNdgG4R",
+        "IdentityPoolName": "bookto44c43956_identitypool_44c43956__dev",
+        "UserPoolName": "bookto44c43956_userpool_44c43956"
+      },
+      "lastPushDirHash": "5pFLf6FWJwHJKIIwXpntm+KQvRQ="
+    }
+  }
+}
