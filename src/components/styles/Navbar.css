@@ -9,7 +9,7 @@
     margin-right: 15px;
 }
 .dashNav{
-    padding: 5px !important;
+    padding: 5px 10px !important;
     background-color: #1C2331;
 }
 .sideNavProfile{
@@ -18,4 +18,9 @@
 .navLi{
     font-weight: 500;
     font-family: 'Poppins',sans-serif;
+}
+.singOutBtn{
+    font-weight: 500;
+    font-family: 'Poppins',sans-serif;
+    text-transform: capitalize;
 }

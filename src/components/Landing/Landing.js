@@ -6,14 +6,14 @@ function Landing() {
   return (
     <div>
       <button
-        className='btn'
+        className='btn center-align'
         onClick={() => {
           navigate("/dashboard");
         }}
       >
         SignUp/Login
       </button>
-      <Navbar />
+    
     </div>
   );
 }

@@ -10,6 +10,10 @@ import Footer from "../Footer/Footer";
 function Dashboard() {
   const [len, setLen] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
 
+    const setUser=(userData,signOut)=>{
+      localStorage.setItem('userdataName',userData.username)
+      localStorage.setItem('userSignOut',signOut)
+    }
   return (
     <div className='signInPage'>
       <Authenticator
@@ -17,7 +21,7 @@ function Dashboard() {
       >
         {({ signOut, user }) => (
           <div className=''>
-            <Navbar />
+            <Navbar user={user} signout={signOut} />
             <div className='container-fluid dashboardContainer'>
               <div className='row'>
                 <div className='col l12 s12'></div>
@@ -27,7 +31,7 @@ function Dashboard() {
                   <div className='col l3 m3 s12'>
                     <div className='card z-depth-3'>
                       <div className='card-image waves-effect waves-block waves-light'>
-                        <img className='activator' src={msd} />
+                        <img className='activator' src={msd} alt="msd"/>
                       </div>
                       <div className='card-content cardContent center-align'>
                         <p className='card-title activator black-text text-darken-4 bookTitle'>
@@ -43,7 +47,7 @@ function Dashboard() {
                       </div>
                       <div className='card-reveal'>
                         <p className='card-title grey-text text-darken-4 revealTitle'>
-                          Book Title
+                          Book Title {user&&user.username}
                           <i className='material-icons right'>close</i>
                         </p>
                         <p className='revealDescription'>
@@ -56,9 +60,8 @@ function Dashboard() {
                 ))}
               </div>
             </div>
-            <button className='btn' onClick={signOut}>
-              Sign out
-            </button>
+            {setUser(user,signOut)}
+           
             <Footer />
           </div>
         )}

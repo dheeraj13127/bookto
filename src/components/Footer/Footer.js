@@ -16,11 +16,11 @@ function Footer() {
 <div class="footer-copyright">
   <div class="container">
       <div className="row">
-          <div className="col l6">
+          <div className="col l12 m6 s12">
               <p>  © 2014 Copyright Text</p>
           </div>
-          <div className="col l6">
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          <div className="col l12 m6 s12">
+      <a class="grey-text text-lighten-4" href="#!">More Links</a>
       </div>
       </div>
       
