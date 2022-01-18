@@ -5,7 +5,7 @@ import msd from "../images/msd.jpg";
 import "../styles/SignUp.css";
 import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
-
+import CarouselContain from "./Carousel";
 import Footer from "../Footer/Footer";
 function Dashboard() {
   const [len, setLen] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
@@ -24,7 +24,9 @@ function Dashboard() {
             <Navbar user={user} signout={signOut} />
             <div className='container-fluid dashboardContainer'>
               <div className='row'>
-                <div className='col l12 s12'></div>
+                <div className='col l12 s12'>
+                  <CarouselContain />
+                </div>
               </div>
               <div className='row dashboardBooksRow'>
                 {len.map((l) => (
