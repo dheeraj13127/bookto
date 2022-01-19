@@ -34,8 +34,22 @@
 }
 .revealTitle{
     font-family: 'Roboto',sans-serif !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
 }
 .dashChip{
     margin-right: 10px;
+}
+.dashboardCardImage{
+    height: 30vh;
+}
+.dashboardCard{
+    
+    border-radius: 12px;
+}
+.cardRevealBox{
+    background-color: #DCDCDC !important;
+}
+.bookInfo{
+    font-family: 'Roboto',sans-serif !important;
+    font-weight: 600 !important;
 }

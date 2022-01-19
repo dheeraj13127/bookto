@@ -1,0 +1,18 @@
+{
+  "resourceName": "s35d69e682",
+  "policyUUID": "5d69e682",
+  "bucketName": "booktobucket",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

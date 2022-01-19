@@ -19,8 +19,29 @@
     font-weight: 500;
     font-family: 'Poppins',sans-serif;
 }
-.singOutBtn{
+.signOutBtn{
     font-weight: 500;
     font-family: 'Poppins',sans-serif;
     text-transform: capitalize;
+    background-color: white;
+    color: #1C2331;
+    border: 1px solid #1C2331;
+}
+.signOutBtnSmall{
+    font-weight: 500;
+    font-family: 'Poppins',sans-serif;
+    text-transform: capitalize;
+    background-color: white;
+    color: #1C2331;
+    border: 1px solid #1C2331;
+}
+.signOutBtn:hover{
+    background-color: #1C2331;
+    color: white;
+    border: 0.1px solid white;
+}
+.signOutBtnSmall:hover{
+    background-color: #1C2331;
+    color: white;
+    border: 0.1px solid white;
 }

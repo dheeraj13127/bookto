@@ -1,0 +1,14 @@
+{
+  "resourceName": "booksdb",
+  "tableName": "booksdb",
+  "partitionKey": {
+    "fieldName": "bookId",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "bookName",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

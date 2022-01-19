@@ -9,11 +9,19 @@
       "UnauthRoleName": "amplify-bookto-dev-175249-unauthRole",
       "StackName": "amplify-bookto-dev-175249",
       "StackId": "arn:aws:cloudformation:ap-south-1:515283276962:stack/amplify-bookto-dev-175249/08da3390-76c7-11ec-b7f6-02bb357ac4d4",
-      "AmplifyAppId": "d19q3w990qdcm5"
+      "AmplifyAppId": "d19q3w990qdcm5",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
-        "bookto44c43956": {}
+        "bookto44c43956": {},
+        "true": {}
+      },
+      "function": {
+        "booksFunction": {
+          "deploymentBucketName": "amplify-bookto-dev-175249-deployment",
+          "s3Key": "amplify-builds/booksFunction-704e4961534346344979-build.zip"
+        }
       }
     }
   }

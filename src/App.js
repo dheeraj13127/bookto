@@ -1,10 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
-
+import Amplify, { Storage } from 'aws-amplify';
+import awsconfig from './aws-exports';
 import "./App.css";
 import Landing from "./components/Landing/Landing";
 import CreateBook from "./components/Createbook/CreateBook";
+Amplify.configure(awsconfig);
+const poolID="ap-south-1:31108f87-a613-4b5d-b264-9e45c7d09408"
+Amplify.configure({
+  Auth: {
+      identityPoolId: poolID, 
+      region: 'ap-south-1',
+      // userPoolId: 'ap-south-1_VrWNdgG4R', //OPTIONAL - Amazon Cognito User Pool ID
+     
+  },
+  Storage: {
+      AWSS3: {
+          bucket: 'booktobucket175249-dev',
+         
+      }
+  }
+});
 function App() {
   return (
     <div>

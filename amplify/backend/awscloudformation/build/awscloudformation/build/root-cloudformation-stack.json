@@ -152,13 +152,34 @@
         }
       }
     },
+    "APIGatewayAuthStack": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json",
+        "Parameters": {
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "env": "dev",
+          "booksapi": {
+            "Fn::GetAtt": [
+              "apibooksapi",
+              "Outputs.ApiId"
+            ]
+          }
+        }
+      }
+    },
     "authbookto44c43956": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
         "TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/auth/bookto44c43956-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "bookto44c43956_identitypool_44c43956",
-          "allowUnauthenticatedIdentities": false,
+          "allowUnauthenticatedIdentities": true,
           "resourceNameTruncated": "bookto44c43956",
           "userPoolName": "bookto44c43956_userpool_44c43956",
           "autoVerifiedAttributes": "email",
@@ -202,6 +223,97 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
+          "env": "dev"
+        }
+      }
+    },
+    "storagebooksdb": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/storage/booksdb-cloudformation-template.json",
+        "Parameters": {
+          "tableName": "booksdb",
+          "partitionKeyName": "bookId",
+          "partitionKeyType": "S",
+          "sortKeyName": "bookName",
+          "sortKeyType": "S",
+          "env": "dev"
+        }
+      }
+    },
+    "storages35d69e682": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "Parameters": {
+          "bucketName": "booktobucket",
+          "selectedGuestPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
+          "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "s3PrivatePolicy": "Private_policy_5d69e682",
+          "s3ProtectedPolicy": "Protected_policy_5d69e682",
+          "s3PublicPolicy": "Public_policy_5d69e682",
+          "s3ReadPolicy": "read_policy_5d69e682",
+          "s3UploadsPolicy": "Uploads_policy_5d69e682",
+          "authPolicyName": "s3_amplify_5d69e682",
+          "unauthPolicyName": "s3_amplify_5d69e682",
+          "AuthenticatedAllowList": "ALLOW",
+          "GuestAllowList": "ALLOW",
+          "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedUploads": "s3:PutObject",
+          "s3PermissionsGuestPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsGuestUploads": "s3:PutObject",
+          "env": "dev"
+        }
+      }
+    },
+    "functionbooksFunction": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/function/booksFunction-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-bookto-dev-175249-deployment",
+          "s3Key": "amplify-builds/booksFunction-704e4961534346344979-build.zip",
+          "storagebooksdbName": {
+            "Fn::GetAtt": [
+              "storagebooksdb",
+              "Outputs.Name"
+            ]
+          },
+          "storagebooksdbArn": {
+            "Fn::GetAtt": [
+              "storagebooksdb",
+              "Outputs.Arn"
+            ]
+          },
+          "env": "dev"
+        }
+      }
+    },
+    "apibooksapi": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/api/booksapi-cloudformation-template.json",
+        "Parameters": {
+          "functionbooksFunctionName": {
+            "Fn::GetAtt": [
+              "functionbooksFunction",
+              "Outputs.Name"
+            ]
+          },
+          "functionbooksFunctionArn": {
+            "Fn::GetAtt": [
+              "functionbooksFunction",
+              "Outputs.Arn"
+            ]
+          },
           "env": "dev"
         }
       }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "../styles/Dashboard.css";
 import msd from "../images/msd.jpg";
@@ -7,13 +7,25 @@ import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import CarouselContain from "./Carousel";
 import Footer from "../Footer/Footer";
+import { API } from "aws-amplify";
 function Dashboard() {
+  const [bookData,setBookData]=useState([])
+  useEffect(() => {
+    API.get("booksapi", "/books/bookId").then((res) =>{
+      
+      setBookData([...bookData,...res])
+    });
+  }, []);
+
+
   const [len, setLen] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
 
     const setUser=(userData,signOut)=>{
+      console.log(userData)
       localStorage.setItem('userdataName',userData.username)
       localStorage.setItem('userSignOut',signOut)
     }
+   
   return (
     <div className='signInPage'>
       <Authenticator
@@ -29,33 +41,41 @@ function Dashboard() {
                 </div>
               </div>
               <div className='row dashboardBooksRow'>
-                {len.map((l) => (
-                  <div className='col l3 m3 s12'>
-                    <div className='card z-depth-3'>
+                {bookData&&bookData.map((l) => (
+                  <div className='col l3 m6 s12'>
+                    <div className='card dashboardCard z-depth-3'>
                       <div className='card-image waves-effect waves-block waves-light'>
-                        <img className='activator' src={msd} alt="msd"/>
+                        <img className='activator dashboardCardImage' src={l.thumbnail} alt="msd"/>
                       </div>
                       <div className='card-content cardContent center-align'>
                         <p className='card-title activator black-text text-darken-4 bookTitle'>
-                          Book Title
+                          {l.bookName}
                         </p>
-                        <p className='bookPrice '>₹199</p>
+                        <p className='bookPrice '>₹ {l.price}</p>
                         <button className='btn waves-effect cartBtn'>
-                          Buy book
+                          Purchase book
                           <i className='material-icons right'>
-                            add_shopping_cart
+                          shopping_bag
                           </i>{" "}
                         </button>
                       </div>
-                      <div className='card-reveal'>
-                        <p className='card-title grey-text text-darken-4 revealTitle'>
-                          Book Title {user&&user.username}
+                      <div className='card-reveal cardRevealBox'>
+                        <h5 className='card-title black-text revealhHeaderTitle'>
+                          About the book
                           <i className='material-icons right'>close</i>
-                        </p>
-                        <p className='revealDescription'>
-                          Here is some more information about this product that
-                          is only revealed once clicked on.
-                        </p>
+                        </h5>
+                        <h6 className='revealDescription revealTitle'>
+                        <span className="bookInfo">Book name</span>:<br/> {l.bookName}
+                        </h6>
+                        <h6 className='revealDescription revealTitle'>
+                        <span className="bookInfo">Book description</span>:<br/> {l.bookDesc}
+                        </h6>
+                        <h6 className='revealDescription revealTitle'>
+                        <span className="bookInfo">Book author</span>:<br/> {l.authorName}
+                        </h6>
+                        <h6 className='revealDescription revealTitle'>
+                        <span className="bookInfo">Book price</span>:<br/> ₹ {l.price}
+                        </h6>
                       </div>
                     </div>
                   </div>

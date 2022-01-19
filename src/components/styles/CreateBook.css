@@ -1,0 +1,42 @@
+.formContainer{
+    border: 5px solid #1C2331;
+    padding: 15px 30px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    border-radius: 8px;
+}
+.createbookHeader{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    color: #1C2331;
+}
+.createBooksubmitBox{
+margin-top: 25px;
+}
+.createBookSubmitBtn{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    background-color: #1C2331;
+    color: white;
+    border: 1px solid #1C2331;
+}
+.createBookSubmitBtn:hover{
+    color: #1C2331;
+    background-color: white;
+    border: 1px solid #1C2331;
+}
+.uploadBtn{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    background-color: white;
+    color: #1C2331;
+    border: 2px solid #1C2331;
+}
+.uploadBtn:hover{
+    background-color: white;
+    color: #1C2331;
+    border: 2px solid #1C2331;
+}
+@media only screen and (max-width: 600px) {
+    
+  }

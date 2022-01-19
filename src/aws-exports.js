@@ -23,6 +23,22 @@ const awsmobile = {
     },
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
+    ],
+    "aws_dynamodb_all_tables_region": "ap-south-1",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "booksdb-dev",
+            "region": "ap-south-1"
+        }
+    ],
+    "aws_user_files_s3_bucket": "booktobucket175249-dev",
+    "aws_user_files_s3_bucket_region": "ap-south-1",
+    "aws_cloud_logic_custom": [
+        {
+            "name": "booksapi",
+            "endpoint": "https://tdw4u1hpeg.execute-api.ap-south-1.amazonaws.com/dev",
+            "region": "ap-south-1"
+        }
     ]
 };
 

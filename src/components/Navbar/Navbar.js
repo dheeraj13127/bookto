@@ -4,21 +4,16 @@ import { FaBook } from "react-icons/fa";
 import "../styles/Navbar.css";
 import msd from "../images/msd.jpg";
 const Navbar=(props)=>{
-  const [userSignOut,setUserSignOut]=useState(null)
-  useEffect(()=>{
-   
-    const userSignOuts=localStorage.getItem("userSignOut")
-    setUserSignOut(userSignOuts)
-  },[])
-  const userName=localStorage.getItem("userdataName")
-console.log(userSignOut)
+  
+ 
+
   const navRef = useRef(null);
   useEffect(() => {
     const M = window.M;
     var sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav, {});
   }, []);
-console.log(userName)
+
   return (
     <div className=''>
       <nav className=' dashNav'>
@@ -32,9 +27,9 @@ console.log(userName)
           </a>
           <ul className='right hide-on-med-and-down'>
           <li>
-              <div class='chip dashChip'>
+              <div className='chip dashChip'>
                 <img src={msd} />
-               {userName&&userName}
+               {props.user.username}
               </div>
             </li>
             <li className='navLi'>
@@ -48,7 +43,7 @@ console.log(userName)
             </li>
           
             <li>
-              <button className="btn-small white black-text singOutBtn" onClick={()=>userSignOut()}>signout</button>
+              <button className="btn-small  signOutBtn" onClick={()=>props.signout()}>signout</button>
             </li>
           </ul>
         </div>
@@ -58,7 +53,7 @@ console.log(userName)
         <li>
           <div className='chip sideNavProfile'>
             <img src={msd} />
-            {userName&&userName}
+            {props.user.username}
           </div>
         </li>
         <li className='navLi'>
@@ -70,8 +65,8 @@ console.log(userName)
         <li className='navLi'>
           <a href=''>My Books</a>
         </li>
-        <li className="signOutBtnSmall">
-              <button className="btn-small black white-text singOutBtn " style={{marginLeft:"30px"}} onClick={()=>userSignOut()}>signout</button>
+        <li className="">
+              <button className="btn-small signOutBtnSmall " style={{marginLeft:"30px"}} onClick={()=>props.signout()}>signout</button>
             </li>
       </ul>
     </div>
