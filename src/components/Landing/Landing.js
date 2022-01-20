@@ -24,7 +24,7 @@ function Landing() {
                   className='buttonDash'
                   onClick={() => navigate("/dashboard")}
                 >
-                  Get Started
+                  Get Start
                 </button>
               </li>
             </ul>
