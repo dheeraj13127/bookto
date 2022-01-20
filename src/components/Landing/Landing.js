@@ -7,43 +7,25 @@ import Footer from "../Footer/Footer";
 import profile from "./assests/2.jpg";
 import { FaBook } from "react-icons/fa";
 import { SiSellfy } from "react-icons/si";
+import dheeraj from "./assests/dheerajnew.png";
+import nameesh from "./assests/Nameesh.JPG";
+import sujay from "./assests/sujay.jpg";
 
 function Landing() {
   const navigate = useNavigate();
   return (
     <div className='container-fluid'>
-      <div className='row navbarMain'>
-        <nav>
-          <div class='nav-wrapper container-fluid'>
-            <a href='#' class='brand-logo'>
-              Logo
-            </a>
-            <ul id='nav-mobile' class='right hide-on-med-and-down'>
-              <li>
-                <button
-                  className='buttonDash'
-                  onClick={() => navigate("/dashboard")}
-                >
-                  Get Start
-                </button>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div className='row center-align valign-wrapper heroSection'>
-          <div className='col s12 m12'>
-            <h1>Welcome to Bookto</h1>
+      <div className='row center-align valign-wrapper heroSection'>
+        <div className='col s12 m12'>
+          <h1>Welcome to Bookto</h1>
 
-            <h5>Find all kinds of books that you are interested in </h5>
-            <button
-              className='buttonDash'
-              onClick={() => navigate("/dashboard")}
-            >
-              Learn more
-            </button>
-          </div>
+          <h5>Find all kinds of books that you are interested in </h5>
+          <button className='buttonDash' onClick={() => navigate("/dashboard")}>
+            Learn more
+          </button>
         </div>
       </div>
+
       <div className='row featureFull'>
         <div className='row featureHeaderWrapper'>
           <div className='row'>
@@ -76,16 +58,7 @@ function Landing() {
           </div>
           <div className='col s12 m3 l3'>
             <div className='row icon'>
-              <FaBook
-                size={60}
-                style={{
-                  backgroundColor: "black",
-                  color: "white",
-
-                  size: "30px",
-                  borderRadius: "50%",
-                }}
-              />
+              <FaBook size={45} />
             </div>
             <div className='row'>Lorem, ipsum.</div>
             <div className='row'>
@@ -140,7 +113,7 @@ function Landing() {
         <div className='row teamMain'>
           <div className='col s12 m3 l3'>
             <div className='row'>
-              <img src={profile} alt='' width='200' />
+              <img src={dheeraj} alt='' width='200' />
             </div>
             <div className='row name'>
               Dheeraj <br />
@@ -158,7 +131,7 @@ function Landing() {
           </div>
           <div className='col s12 m3 l3'>
             <div className='row'>
-              <img src={profile} alt='' width='200' />
+              <img src={nameesh} alt='' width='200' />
             </div>
             <div className='row name'>
               Nameesha <br />
@@ -167,7 +140,7 @@ function Landing() {
           </div>
           <div className='col s12 m3 l3'>
             <div className='row'>
-              <img src={profile} alt='' width='200' />
+              <img src={sujay} alt='' width='200' />
             </div>
             <div className='row name'>
               Sujay <br />
