@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Inter&display=swap");
+
+.heroSection {
+  background-image: url("../Landing/assests/1.jpg");
+  background-position: center;
+  padding: 290px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: "Dongle", sans-serif;
+}
+
+.landingLogo {
+  color: #000 !important;
+}
+
+.landingNav {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.nav-wrapper {
+  background: transparent !important;
+}
+
+.heroSection h1 {
+  font-size: 127px !important;
+  padding-bottom: 0px !important;
+  line-height: 0.75 !important;
+  backdrop-filter: blur(10px);
+}
+
+.heroSection h5 {
+  font-size: 40px !important;
+  padding: 0px !important;
+}
+
+.buttonDash {
+  background-color: #24a19c;
+  border: 2px solid #24a19c;
+  padding: 15px 25px;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.buttonDash:hover {
+  color: #24a19c;
+  background-color: #ffffff;
+}
+
+.blueLine {
+  width: 130px;
+  height: 5px;
+  background-color: #000;
+
+  margin: auto;
+  margin-bottom: 15px;
+}
+.featureHeader,
+.servicesHeader {
+  margin-bottom: 0px !important;
+}
+.servicesFull {
+  background: hsla(192, 77%, 53%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(192, 77%, 53%, 1) 0%,
+    hsla(233, 37%, 68%, 1) 48%,
+    hsla(227, 37%, 72%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(192, 77%, 53%, 1) 0%,
+    hsla(233, 37%, 68%, 1) 48%,
+    hsla(227, 37%, 72%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(192, 77%, 53%, 1) 0%,
+    hsla(233, 37%, 68%, 1) 48%,
+    hsla(227, 37%, 72%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2BBFE4", endColorstr="#8F96CB", GradientType=1 );
+}
+
+.featuresMain,
+.servicesMain,
+.teamMain {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+.featuresMain .col,
+.servicesMain .col,
+.teamMain .col {
+  padding: 25px !important;
+}
+
+.featureFull,
+.servicesFull,
+.teamFull {
+  padding: 55px 4.5rem 100px;
+}
+.row .col {
+  margin-left: 0 !important;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+.featureHeaderWrapper {
+  margin-bottom: 45px;
+}
+.name {
+  font-size: 23px;
+  font-weight: bold;
+}
+.desc {
+  font-weight: 400;
+  font-size: 17px;
+  color: #444949;
+}
+
+.blueLine .team {
+  width: 260px;
+}
+
+@media only screen and (max-width: 800px) {
+  .featuresMain,
+  .servicesMain,
+  .teamMain {
+    display: flex;
+    flex-direction: column;
+  }
+}
