@@ -30,9 +30,11 @@ function CreateBook() {
     bookDesc: "",
     authorName: "",
     price: "",
+    walletAddress:""
   });
   const [thumbnail, setThumbnail] = useState(null);
   const [content, setContent] = useState(null);
+  const [purchasedBooks,setPurchasedBooks]=useState([])
 
   const [userId, setUserId] = useState(null);
   const getUser = (user) => {
@@ -56,13 +58,15 @@ function CreateBook() {
       bookDetails.authorName === "" ||
       bookDetails.price === "" ||
       thumbnail === "" ||
-      content === ""
+      content === "",
+      bookDetails.walletAddress===""
     ) {
       toast("Please fill in the fields!", {
         icon: "😊",
       });
     }
-    await S3FileUpload.uploadFile(thumbnail, config)
+    else{
+      await S3FileUpload.uploadFile(thumbnail, config)
       .then((data) => {
         linkThumbnail = data.location;
       })
@@ -82,9 +86,13 @@ function CreateBook() {
       price: bookDetails.price,
       thumbnail: linkThumbnail,
       content: linkContent,
+      purchasedBooks:purchasedBooks,
+      walletAddress:bookDetails.walletAddress
     };
     dispatch(createNewBook(payload, API,navigate));
   };
+    }
+
   return (
     <div>
       <Authenticator>
@@ -95,7 +103,7 @@ function CreateBook() {
               {getUser(user)}
               <div className="row">
                 <div className="col l6 offset-l3 s12 ">
-                  <div className="formContainer z-depth-2">
+                  <div className="formContainer z-depth-3">
                     <h3 className="center-align createbookHeader">
                       Create a Book
                     </h3>
@@ -108,7 +116,7 @@ function CreateBook() {
                           value={bookDetails.bookName}
                           onChange={onBookDetailsChange}
                           placeholder="Name of the book"
-                          className="validate"
+                          className="validate bookInput"
                         />
                       </div>
                       <div className="input-field">
@@ -118,7 +126,7 @@ function CreateBook() {
                           value={bookDetails.bookDesc}
                           onChange={onBookDetailsChange}
                           placeholder="Description about the book"
-                          className="materialize-textarea"
+                          className="materialize-textarea bookInput"
                           
                         />
                       </div>
@@ -129,7 +137,7 @@ function CreateBook() {
                           onChange={onBookDetailsChange}
                           type="text"
                           placeholder="Author Name"
-                          className="validate"
+                          className="validate bookInput"
                         />
                       </div>
                       <div className="input-field">
@@ -138,8 +146,18 @@ function CreateBook() {
                           name="price"
                           value={bookDetails.price}
                           onChange={onBookDetailsChange}
-                          placeholder="Price of the Book in ₹"
-                          className="validate"
+                          placeholder="Price of the Book in ETH"
+                          className="validate bookInput"
+                        />
+                      </div>
+                      <div className="input-field">
+                        <input
+                          type="text"
+                          name="walletAddress"
+                          value={bookDetails.walletAddress}
+                          onChange={onBookDetailsChange}
+                          placeholder="Your Ethereum Wallet Address"
+                          className="validate bookInput"
                         />
                       </div>
                       <div className="file-field input-field">
@@ -153,8 +171,8 @@ function CreateBook() {
                         </div>
                         <div className="file-path-wrapper">
                           <input
-                            className="file-path validate"
-                            placeholder="Choose Thumbnail of the book"
+                            className="file-path validate bookInput"
+                            placeholder="Choose Thumbnail of the book "
                             type="text"
                           />
                         </div>
@@ -170,7 +188,7 @@ function CreateBook() {
                         </div>
                         <div className="file-path-wrapper">
                           <input
-                            className="file-path validate"
+                            className="file-path validate bookInput"
                             placeholder="Upload Content of the book"
                             type="text"
                           />
@@ -182,7 +200,7 @@ function CreateBook() {
                         </button>
                       </div>
                     </form>
-                  </div>
+                  </div>  <Toaster position="top-center" reverseOrder={false} />
                 </div>
               </div>
             </div>

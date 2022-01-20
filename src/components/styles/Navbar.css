@@ -4,7 +4,9 @@
     font-family: 'Poppins',sans-serif;
     font-size: 25px !important;
 }
-
+.metaChip{
+    cursor:pointer !important;
+}
 .brandImage{
     margin-right: 15px;
 }
@@ -14,6 +16,7 @@
 }
 .sideNavProfile{
     margin-left: 30px;
+    text-transform: capitalize !important;
 }
 .navLi{
     font-weight: 500;
@@ -41,6 +44,26 @@
     border: 0.1px solid white;
 }
 .signOutBtnSmall:hover{
+    background-color: #1C2331;
+    color: white;
+    border: 0.1px solid white;
+}
+.signOutBtn:focus{
+    background-color: #1C2331;
+    color: white;
+    border: 0.1px solid white;
+}
+.signOutBtn:active{
+    background-color: #1C2331;
+    color: white;
+    border: 0.1px solid white;
+}
+.signOutBtnSmall:focus{
+    background-color: #1C2331;
+    color: white;
+    border: 0.1px solid white;
+}
+.signOutBtnSmall:active{
     background-color: #1C2331;
     color: white;
     border: 0.1px solid white;

@@ -7,7 +7,7 @@ import logo3 from "./assets/3.jpeg";
 import "../styles/Carousel.css";
 export default () => (
   <Carousel
-    autoPlay={false}
+    autoPlay={true}
     fade
     infiniteLoop
     transitionTime={"500ms"}

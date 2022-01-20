@@ -19,6 +19,9 @@
     font-family: 'Roboto',sans-serif;
     font-weight: 600;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .cardContent{
     background-color: #DCDCDC;

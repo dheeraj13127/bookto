@@ -1,9 +1,17 @@
+.createBookContainer{
+    /* background-image: url('../images/cbback1.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
 .formContainer{
     border: 5px solid #1C2331;
     padding: 15px 30px;
     margin-top: 75px;
     margin-bottom: 75px;
     border-radius: 8px;
+    background: #E4E4E4;
 }
 .createbookHeader{
     font-family: 'Poppins',sans-serif;
@@ -25,6 +33,16 @@ margin-top: 25px;
     background-color: white;
     border: 1px solid #1C2331;
 }
+.createBookSubmitBtn:focus{
+    color: #1C2331;
+    background-color: white;
+    border: 1px solid #1C2331;
+}
+.createBookSubmitBtn:active{
+    color: #1C2331;
+    background-color: white;
+    border: 1px solid #1C2331;
+}
 .uploadBtn{
     font-family: 'Poppins',sans-serif;
     font-weight: 500;
@@ -36,6 +54,19 @@ margin-top: 25px;
     background-color: white;
     color: #1C2331;
     border: 2px solid #1C2331;
+}
+.uploadBtn:focus{
+    background-color: white;
+    color: #1C2331;
+    border: 2px solid #1C2331;
+}
+.uploadBtn:active{
+    background-color: white;
+    color: #1C2331;
+    border: 2px solid #1C2331;
+}
+.bookInput::placeholder{
+    color: #1C2331 !important;
 }
 @media only screen and (max-width: 600px) {
     

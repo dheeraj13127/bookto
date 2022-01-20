@@ -1,0 +1,62 @@
+.purchaseBookContainer{
+    padding: 10px 25px;
+   
+}
+
+.purchaseBookRow{
+    margin: 105px 0px;
+    background-color: #1C2331;
+    border-radius: 12px !important;
+    padding: 25px;
+}
+.purchaseBookThumbnail{
+    height: 35vh;
+    width: 25vw;
+    border-radius: 10px !important;
+   
+   
+}
+.purchaseBookTitles{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 20px ;
+}
+.purchaseBookTitlesData{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.purchaseBookPurchaseBtn{
+    background-color: rgb(197, 169, 8);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.purchaseBookPurchaseBtn:hover{
+    color: rgb(197, 169, 8);
+    background-color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+.purchaseBookPurchaseBtn:active{
+    color: rgb(197, 169, 8);
+    background-color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+.purchaseBookPurchaseBtn:focus{
+    color: rgb(197, 169, 8);
+    background-color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+@media only screen and (max-width: 992px) {
+    .purchaseBookThumbnail{
+        height: 35vh;
+        width: 250px;
+        border-radius: 10px !important;
+    }
+    .purchaseBookRow{
+        margin: 60px  0px !important;
+    }
+}

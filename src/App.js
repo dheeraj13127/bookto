@@ -6,6 +6,9 @@ import awsconfig from './aws-exports';
 import "./App.css";
 import Landing from "./components/Landing/Landing";
 import CreateBook from "./components/Createbook/CreateBook";
+import PurchaseBook from "./components/PurchaseBook/PurchaseBook";
+import BlockchainProvider from './BlockChainProvider/index'
+import {UseWalletProvider} from 'use-wallet'
 Amplify.configure(awsconfig);
 const poolID="ap-south-1:31108f87-a613-4b5d-b264-9e45c7d09408"
 Amplify.configure({
@@ -25,14 +28,18 @@ Amplify.configure({
 function App() {
   return (
     <div>
+     <UseWalletProvider chainId={4} connectors={{}}>
+       <BlockchainProvider />
       <Router>
         <Routes>
           <Route path='/' exact element={<Landing />} />
           <Route path="/createBook" exact element={<CreateBook/>}/>
+          <Route path="/purchaseBook/:id" exact element={<PurchaseBook/>}/>
           <Route path='/dashboard' exact element={<Dashboard />} />
           
         </Routes>
       </Router>
+      </UseWalletProvider>
     </div>
   );
 }
