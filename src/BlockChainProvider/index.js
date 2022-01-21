@@ -13,7 +13,7 @@ function BlockchainProvider() {
              BOOKTO_CONTRACT.abi,BOOKTO_CONTRACT.address
             );
             dispatch(loadBooktoContract(BooktoContract))
-            console.log(BooktoContract.methods)
+         
           
           } catch (err) {
             console.log(err);

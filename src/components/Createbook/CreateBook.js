@@ -99,10 +99,10 @@ function CreateBook() {
         {({ signOut, user }) => (
           <div>
             <Navbar user={user} signout={signOut} />
-            <div className="container createBookContainer">
+            <div className="container createBookContainer" >
               {getUser(user)}
               <div className="row">
-                <div className="col l6 offset-l3 s12 ">
+                <div className="col l6 push-l3 s12">
                   <div className="formContainer z-depth-3">
                     <h3 className="center-align createbookHeader">
                       Create a Book
@@ -200,7 +200,7 @@ function CreateBook() {
                         </button>
                       </div>
                     </form>
-                  </div>  <Toaster position="top-center" reverseOrder={false} />
+                  </div>  
                 </div>
               </div>
             </div>

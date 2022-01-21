@@ -14,6 +14,7 @@ const Navbar = (props) => {
     const M = window.M;
     var sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav, {});
+    wallet.connect()
   }, []);
  const authWallet=()=>{
    !wallet.account&&wallet.connect()
