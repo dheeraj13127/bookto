@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Landing.css";
 import Footer from "../Footer/Footer";
 import profile from "./assests/2.jpg";
-import { FaBook } from "react-icons/fa";
+import { FaBook,FaEthereum } from "react-icons/fa";
 import { SiSellfy } from "react-icons/si";
 import { HiShoppingCart } from "react-icons/hi";
 import { RiSecurePaymentFill } from "react-icons/ri";
@@ -24,7 +24,7 @@ function Landing() {
 
           <h5>Look for your next adventure here </h5>
           <button className='buttonDash' onClick={() => navigate("/dashboard")}>
-            Learn more
+          Get Started
           </button>
         </div>
       </div>
@@ -41,7 +41,7 @@ function Landing() {
         <div className='row center-align featuresMain'>
           <div className='col s12 m3 l3'>
             <div className='row icon'>
-              <GrBitcoin size={45} />
+              <FaEthereum size={45} />
             </div>
             <div className='row title'>Crypto Transactions</div>
             <div className='row cont'>

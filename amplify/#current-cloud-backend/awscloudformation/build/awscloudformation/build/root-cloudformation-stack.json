@@ -297,19 +297,6 @@
         }
       }
     },
-    "functionbooktobooktolayer": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/function/booktobooktolayer-awscloudformation-template.json",
-        "Parameters": {
-          "runtimes": "nodejs14.x",
-          "description": "Updated layer version 2022-01-21T12:04:32.571Z",
-          "deploymentBucketName": "amplify-bookto-dev-175249-deployment",
-          "s3Key": "amplify-builds/booktobooktolayer-LambdaLayerVersion357495e3-build.zip",
-          "env": "dev"
-        }
-      }
-    },
     "apibooksapi": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {

@@ -1,5 +1,5 @@
 {
-  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"Amplify\",\"createdWith\":\"7.6.9\",\"stackType\":\"api-API Gateway\",\"metadata\":{}}",
+  "Description": "API Gateway Resource for AWS Amplify CLI",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "functionbooksFunctionName": {
@@ -408,7 +408,7 @@
         }
       }
     },
-    "DeploymentAPIGWbooksapi80c5d012": {
+    "DeploymentAPIGWbooksapi36f340ee": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {

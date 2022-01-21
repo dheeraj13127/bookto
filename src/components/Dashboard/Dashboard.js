@@ -33,7 +33,7 @@ function Dashboard() {
   return (
     <div className='signInPage'>
       <Authenticator
-        socialProviders={["amazon", "apple", "facebook", "google"]}
+        
       >
         {({ signOut, user }) => (
           <div className=''>

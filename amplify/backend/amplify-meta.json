@@ -41,7 +41,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/auth/bookto44c43956-cloudformation-template.json",
         "logicalId": "authbookto44c43956"
       },
-      "lastPushTimeStamp": "2022-01-21T12:42:08.688Z",
+      "lastPushTimeStamp": "2022-01-21T13:09:24.781Z",
       "output": {
         "UserPoolId": "ap-south-1_VrWNdgG4R",
         "AppClientIDWeb": "2or5qov41d9ac72t4kvc9kob7d",
@@ -62,7 +62,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/storage/booksdb-cloudformation-template.json",
         "logicalId": "storagebooksdb"
       },
-      "lastPushTimeStamp": "2022-01-21T12:42:08.690Z",
+      "lastPushTimeStamp": "2022-01-21T13:09:24.792Z",
       "output": {
         "PartitionKeyName": "bookId",
         "SortKeyName": "bookName",
@@ -79,7 +79,7 @@
       "service": "S3",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "lastPushTimeStamp": "2022-01-21T12:42:16.615Z",
+      "lastPushTimeStamp": "2022-01-21T13:09:27.633Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storages35d69e682"
@@ -122,7 +122,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/function/booksFunction-cloudformation-template.json",
         "logicalId": "functionbooksFunction"
       },
-      "lastPushTimeStamp": "2022-01-21T12:42:08.692Z",
+      "lastPushTimeStamp": "2022-01-21T13:09:24.798Z",
       "output": {
         "Region": "ap-south-1",
         "Arn": "arn:aws:lambda:ap-south-1:515283276962:function:booksFunction-dev",
@@ -150,7 +150,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/api/booksapi-cloudformation-template.json",
         "logicalId": "apibooksapi"
       },
-      "lastPushTimeStamp": "2022-01-21T12:42:08.693Z",
+      "lastPushTimeStamp": "2022-01-21T13:09:24.800Z",
       "output": {
         "ApiName": "booksapi",
         "RootUrl": "https://tdw4u1hpeg.execute-api.ap-south-1.amazonaws.com/dev",
