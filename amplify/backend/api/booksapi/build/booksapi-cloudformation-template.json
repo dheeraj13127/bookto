@@ -408,7 +408,7 @@
         }
       }
     },
-    "DeploymentAPIGWbooksapi81ac4470": {
+    "DeploymentAPIGWbooksapi01f45f35": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {

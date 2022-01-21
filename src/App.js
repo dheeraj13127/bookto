@@ -9,6 +9,7 @@ import CreateBook from "./components/Createbook/CreateBook";
 import PurchaseBook from "./components/PurchaseBook/PurchaseBook";
 import BlockchainProvider from './BlockChainProvider/index'
 import {UseWalletProvider} from 'use-wallet'
+import MyBooks from "./components/MyBooks/MyBooks";
 Amplify.configure(awsconfig);
 const poolID="ap-south-1:31108f87-a613-4b5d-b264-9e45c7d09408"
 Amplify.configure({
@@ -35,6 +36,7 @@ function App() {
           <Route path='/' exact element={<Landing />} />
           <Route path="/createBook" exact element={<CreateBook/>}/>
           <Route path="/purchaseBook/:id" exact element={<PurchaseBook/>}/>
+          <Route path="/myBooks" exact element={<MyBooks/>}/>
           <Route path='/dashboard' exact element={<Dashboard />} />
           
         </Routes>

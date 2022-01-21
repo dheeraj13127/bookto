@@ -37,11 +37,6 @@
           "EMAIL"
         ]
       },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/auth/bookto44c43956-cloudformation-template.json",
-        "logicalId": "authbookto44c43956"
-      },
-      "lastPushTimeStamp": "2022-01-18T19:20:30.381Z",
       "output": {
         "UserPoolId": "ap-south-1_VrWNdgG4R",
         "AppClientIDWeb": "2or5qov41d9ac72t4kvc9kob7d",
@@ -51,6 +46,11 @@
         "IdentityPoolName": "bookto44c43956_identitypool_44c43956__dev",
         "UserPoolName": "bookto44c43956_userpool_44c43956"
       },
+      "lastPushTimeStamp": "2022-01-20T19:26:32.529Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/auth/bookto44c43956-cloudformation-template.json",
+        "logicalId": "authbookto44c43956"
+      },
       "lastPushDirHash": "W46dcxr74z0MMoJEbQh6WfUqvAw="
     }
   },
@@ -58,11 +58,6 @@
     "booksdb": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/storage/booksdb-cloudformation-template.json",
-        "logicalId": "storagebooksdb"
-      },
-      "lastPushTimeStamp": "2022-01-18T19:20:30.359Z",
       "output": {
         "PartitionKeyName": "bookId",
         "SortKeyName": "bookName",
@@ -73,20 +68,25 @@
         "PartitionKeyType": "S",
         "Name": "booksdb-dev"
       },
+      "lastPushTimeStamp": "2022-01-20T19:26:32.529Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/storage/booksdb-cloudformation-template.json",
+        "logicalId": "storagebooksdb"
+      },
       "lastPushDirHash": "T213CCy1mpEgsAehTZkTk/TMYgc="
     },
     "s35d69e682": {
       "service": "S3",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "lastPushTimeStamp": "2022-01-18T19:20:30.381Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "logicalId": "storages35d69e682"
-      },
       "output": {
         "BucketName": "booktobucket175249-dev",
         "Region": "ap-south-1"
+      },
+      "lastPushTimeStamp": "2022-01-20T19:26:32.529Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages35d69e682"
       },
       "lastPushDirHash": "FejJYMPRqArqiIq8x1mz/QiXTFU="
     }
@@ -110,25 +110,25 @@
           }
         }
       ],
-      "lastBuildTimeStamp": "2022-01-18T16:44:48.404Z",
-      "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2022-01-18T16:44:54.132Z",
-      "distZipFilename": "booksFunction-704e4961534346344979-build.zip",
-      "s3Bucket": {
-        "deploymentBucketName": "amplify-bookto-dev-175249-deployment",
-        "s3Key": "amplify-builds/booksFunction-704e4961534346344979-build.zip"
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/function/booksFunction-cloudformation-template.json",
-        "logicalId": "functionbooksFunction"
-      },
-      "lastPushTimeStamp": "2022-01-18T19:20:30.366Z",
       "output": {
         "Region": "ap-south-1",
         "Arn": "arn:aws:lambda:ap-south-1:515283276962:function:booksFunction-dev",
         "Name": "booksFunction-dev",
         "LambdaExecutionRole": "booktoLambdaRole1e87e9de-dev"
       },
+      "lastPushTimeStamp": "2022-01-20T19:26:32.529Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/function/booksFunction-cloudformation-template.json",
+        "logicalId": "functionbooksFunction"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-bookto-dev-175249-deployment",
+        "s3Key": "amplify-builds/booksFunction-704e4961534346344979-build.zip"
+      },
+      "lastBuildTimeStamp": "2022-01-20T19:25:26.050Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-01-20T19:25:29.007Z",
+      "distZipFilename": "booksFunction-704e4961534346344979-build.zip",
       "lastPushDirHash": "hzST9roX0qtN6/p1cc1RJJ8CP48="
     }
   },
@@ -146,15 +146,15 @@
           ]
         }
       ],
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/api/booksapi-cloudformation-template.json",
-        "logicalId": "apibooksapi"
-      },
-      "lastPushTimeStamp": "2022-01-18T19:20:30.368Z",
       "output": {
         "ApiName": "booksapi",
         "RootUrl": "https://tdw4u1hpeg.execute-api.ap-south-1.amazonaws.com/dev",
         "ApiId": "tdw4u1hpeg"
+      },
+      "lastPushTimeStamp": "2022-01-20T19:26:32.529Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-bookto-dev-175249-deployment/amplify-cfn-templates/api/booksapi-cloudformation-template.json",
+        "logicalId": "apibooksapi"
       },
       "lastPushDirHash": "BECfurBwjLoFKEwcUxB+4d+pf7U="
     }

@@ -55,11 +55,6 @@
           }
         }
       ]
-    },
-    "booktobooktolayer": {
-      "providerPlugin": "awscloudformation",
-      "service": "LambdaLayer",
-      "build": true
     }
   },
   "api": {

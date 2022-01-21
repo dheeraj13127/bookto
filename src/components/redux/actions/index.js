@@ -1,6 +1,7 @@
 import {CREATE_BOOK} from '../constants/constants'
 import toast from 'react-hot-toast'
 import {GET_BOOKTOCONTRACT} from '../constants/constants'
+
 export const createNewBook = (payload,API,navigate) => async (dispatch, getState) => {
     toast("Will take few seconds!", {
         icon: "⏳",
@@ -23,25 +24,19 @@ export const createNewBook = (payload,API,navigate) => async (dispatch, getState
   
   }
   export const loadBooktoContract=(payload)=>async(dispatch,getState)=>{
+    
     dispatch({
       type:GET_BOOKTOCONTRACT,
       payload:payload
     })
   }
-  export const purchaseNewBook=(API,userData,bId)=>async(dispatch,getState)=>{
 
-
-    API.put("booksapi","/books",{
-      body:{
-        bookId:bId,
-        purchasedBooks:userData
-      }
-  })
-  .then(resp=>{
-    console.log(resp)
-  })
-  .catch(errs=>console.log(errs))
-
-
-
+  export const purchaseNewBook=(API,booksData,setShowDownloadBtn)=>async(dispatch,getState)=>{
+    API.put("booksapi", "/books", {
+     body:booksData
+    })
+      .then((resp) => {
+        setShowDownloadBtn(true);
+      })
+      .catch((errs) => console.log(errs));
   }

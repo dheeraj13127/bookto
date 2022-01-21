@@ -50,6 +50,12 @@
     font-family: 'Poppins',sans-serif;
     font-weight: 600;
 }
+.purchaseBookDownloadBtn{
+  
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+}
 @media only screen and (max-width: 992px) {
     .purchaseBookThumbnail{
         height: 35vh;

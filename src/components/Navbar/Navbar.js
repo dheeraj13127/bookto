@@ -50,7 +50,7 @@ const Navbar = (props) => {
               <a href="/createBook">Create Book</a>
             </li>
             <li className="navLi">
-              <a href="">My Books</a>
+              <a href="/myBooks">My Books</a>
             </li>
 
             <li>
@@ -85,7 +85,7 @@ const Navbar = (props) => {
           <a href="/createBook">Create Book</a>
         </li>
         <li className="navLi">
-          <a href="">My Books</a>
+          <a href="/myBooks">My Books</a>
         </li>
         <li className="">
           <button
