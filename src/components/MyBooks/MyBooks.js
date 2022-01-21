@@ -150,7 +150,8 @@ console.log(newPbook)
                 </div>
               </div>
             ) : (
-              <div className="center-align" style={{ marginTop: "30px" }}>
+              <div className="center-align" style={{ marginTop: "80px" }}>
+                <h5>No Books Purchased or Published</h5>
                 <HashLoader color={color} size={150} />
               </div>
             )}
