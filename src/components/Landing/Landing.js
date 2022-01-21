@@ -1,12 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
-import backgroundImage from "./assests/1.jpg";
 import "../styles/Landing.css";
 import Footer from "../Footer/Footer";
 import profile from "./assests/2.jpg";
 import { FaBook } from "react-icons/fa";
 import { SiSellfy } from "react-icons/si";
+import { HiShoppingCart } from "react-icons/hi";
+import { RiSecurePaymentFill } from "react-icons/ri";
+import { GrBitcoin, GrSecure } from "react-icons/gr";
+import { MdOutlinePayment, MdSell } from "react-icons/md";
+import { IoLibrary } from "react-icons/io5";
 import dheeraj from "./assests/dheerajnew.png";
 import nameesh from "./assests/Nameesh.JPG";
 import sujay from "./assests/sujay.jpg";
@@ -14,12 +17,12 @@ import sujay from "./assests/sujay.jpg";
 function Landing() {
   const navigate = useNavigate();
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid landingFullPage'>
       <div className='row center-align valign-wrapper heroSection'>
         <div className='col s12 m12'>
           <h1>Welcome to Bookto</h1>
 
-          <h5>Find all kinds of books that you are interested in </h5>
+          <h5>Look for your next adventure here </h5>
           <button className='buttonDash' onClick={() => navigate("/dashboard")}>
             Learn more
           </button>
@@ -38,32 +41,34 @@ function Landing() {
         <div className='row center-align featuresMain'>
           <div className='col s12 m3 l3'>
             <div className='row icon'>
-              <FaBook size={45} />
+              <GrBitcoin size={45} />
             </div>
-            <div className='row'>lorem</div>
-            <div className='row'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-              blanditiis.
-            </div>
-          </div>
-          <div className='col s12 m3 l3'>
-            <div className='row icon'>
-              <FaBook size={45} />
-            </div>
-            <div className='row'>Lorem, ipsum.</div>
-            <div className='row'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat,
-              sit.
+            <div className='row title'>Crypto Transactions</div>
+            <div className='row cont'>
+              We are moving with the world and accept{" "}
+              <strong>
+                <u>cryptocurrency</u>
+              </strong>{" "}
+              as our main currency to buy and sell books.
             </div>
           </div>
           <div className='col s12 m3 l3'>
             <div className='row icon'>
-              <FaBook size={45} />
+              <MdOutlinePayment size={45} />
             </div>
-            <div className='row'>Lorem, ipsum.</div>
-            <div className='row'>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Corrupti, neque.
+            <div className='row title'>Instant Payments</div>
+            <div className='row cont'>
+              The funds from selling your book will be sent instantly to your
+              linked account.
+            </div>
+          </div>
+          <div className='col s12 m3 l3'>
+            <div className='row icon'>
+              <GrSecure size={45} />
+            </div>
+            <div className='row title'>Secure</div>
+            <div className='row cont'>
+              We use Amazon's Cognito Service to authenticate users.
             </div>
           </div>
         </div>
@@ -75,31 +80,31 @@ function Landing() {
           </div>
           <div className='blueLine'></div>
         </div>
-        <div className='row center-align'>
+        <div className='row center-align serviceDesc'>
           We welcome everyone who wish to be immersed in the world of their own
           and we make our best effort so you can spread your wings.
         </div>
         <div className='row center-align servicesMain'>
           <div className='col s12 m3 l3'>
             <div className='row icon'>
-              <FaBook size={45} />
+              <IoLibrary size={45} />
             </div>
-            <div className='row'>Browse</div>
-            <div className='row'>Check out our curated collection</div>
+            <div className='row title'>Browse</div>
+            <div className='row cont'>Check out our curated collection</div>
           </div>
           <div className='col s12 m3 l3'>
             <div className='row icon'>
-              <FaBook size={45} />
+              <HiShoppingCart size={45} />
             </div>
-            <div className='row'>Buy</div>
-            <div className='row'>Own your book by the tap of a button</div>
+            <div className='row title'>Buy</div>
+            <div className='row cont'>Own your book by the tap of a button</div>
           </div>
           <div className='col s12 m3 l3'>
             <div className='row icon'>
-              <SiSellfy size={45} />
+              <MdSell size={45} />
             </div>
-            <div className='row'>Sell</div>
-            <div className='row'>
+            <div className='row title'>Sell</div>
+            <div className='row cont'>
               Find a bigger audience to express yourself
             </div>
           </div>
@@ -126,7 +131,7 @@ function Landing() {
             </div>
             <div className='row name'>
               Sumedh <br />
-              <div className='desc'>Front-End Developer</div>
+              <div className='desc'>Frontend Developer</div>
             </div>
           </div>
           <div className='col s12 m3 l3'>

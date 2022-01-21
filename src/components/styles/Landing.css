@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .heroSection {
   background-image: url("../Landing/assests/1.jpg");
@@ -9,7 +9,11 @@
   color: #ffffff;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
-  font-family: "Dongle", sans-serif;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.15;
+}
+.landingFullPage {
+  font-family: "Poppins", sans-serif;
 }
 
 .landingLogo {
@@ -25,15 +29,23 @@
 }
 
 .heroSection h1 {
-  font-size: 127px !important;
+  font-size: 77px !important;
   padding-bottom: 0px !important;
-  line-height: 0.75 !important;
   backdrop-filter: blur(10px);
+}
+.title {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.cont {
+  color: #312d2d;
+  font-size: 14px;
 }
 
 .heroSection h5 {
-  font-size: 40px !important;
-  padding: 0px !important;
+  font-size: 18px !important;
+  padding: 10px !important;
 }
 
 .buttonDash {
@@ -68,28 +80,30 @@
 
   background: linear-gradient(
     90deg,
-    hsla(192, 77%, 53%, 1) 0%,
+    rgb(68, 101, 109) 0%,
     hsla(233, 37%, 68%, 1) 48%,
     hsla(227, 37%, 72%, 1) 100%
   );
 
   background: -moz-linear-gradient(
     90deg,
-    hsla(192, 77%, 53%, 1) 0%,
+    rgb(68, 101, 109) 0%,
     hsla(233, 37%, 68%, 1) 48%,
     hsla(227, 37%, 72%, 1) 100%
   );
 
   background: -webkit-linear-gradient(
     90deg,
-    hsla(192, 77%, 53%, 1) 0%,
+    rgb(70, 127, 143) 0%,
     hsla(233, 37%, 68%, 1) 48%,
     hsla(227, 37%, 72%, 1) 100%
   );
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2BBFE4", endColorstr="#8F96CB", GradientType=1 );
 }
-
+.serviceDesc {
+  font-size: 14px;
+}
 .featuresMain,
 .servicesMain,
 .teamMain {
