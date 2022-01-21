@@ -130,6 +130,11 @@
         "LambdaExecutionRole": "booktoLambdaRole1e87e9de-dev"
       },
       "lastPushDirHash": "hzST9roX0qtN6/p1cc1RJJ8CP48="
+    },
+    "booktobooktolayer": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
     }
   },
   "api": {

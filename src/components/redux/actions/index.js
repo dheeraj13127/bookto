@@ -28,3 +28,20 @@ export const createNewBook = (payload,API,navigate) => async (dispatch, getState
       payload:payload
     })
   }
+  export const purchaseNewBook=(API,userData,bId)=>async(dispatch,getState)=>{
+
+
+    API.put("booksapi","/books",{
+      body:{
+        bookId:bId,
+        purchasedBooks:userData
+      }
+  })
+  .then(resp=>{
+    console.log(resp)
+  })
+  .catch(errs=>console.log(errs))
+
+
+
+  }

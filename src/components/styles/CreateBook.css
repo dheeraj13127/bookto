@@ -3,6 +3,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; */
+
 }
 
 .formContainer{
@@ -69,5 +70,7 @@ margin-top: 25px;
     color: #1C2331 !important;
 }
 @media only screen and (max-width: 600px) {
-    
+    .formContainer{
+        padding: 10px 20px;
+    }
   }
